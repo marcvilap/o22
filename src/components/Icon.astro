@@ -1,0 +1,25 @@
+---
+interface Props {
+	name: string
+	class?: string
+}
+
+const { name, class: className } = Astro.props
+
+const icons = Object.fromEntries(
+	Object.entries(import.meta.glob('../assets/icons/**/*.svg', { as: 'raw', eager: true })).map(
+		([path, value]) => [path.split('/').pop()?.split('.')[0] ?? '', value],
+	),
+)
+
+const icon = icons[name]
+
+if (!icon) return
+---
+
+<Fragment
+	set:html={icon.replace(
+		' xmlns="http://www.w3.org/2000/svg"',
+		className ? ` class="${className}"` : '',
+	)}
+/>

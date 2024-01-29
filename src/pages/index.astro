@@ -1,0 +1,231 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+import videoBg from '$assets/videos/video-bg.mp4'
+import image01 from '$assets/images/image01.webp'
+import image02 from '$assets/images/image02.webp'
+import image03 from '$assets/images/image03.webp'
+import image04 from '$assets/images/image04.webp'
+import cloud from '$assets/images/cloud.webp'
+import bubble from '$assets/images/bubble.png'
+---
+
+<Layout>
+	<div class="overflow-clip text-white">
+		<div class="sticky top-0">
+			<video id="video" class="h-screen w-full object-cover" src={videoBg} muted></video>
+			<span class="absolute inset-0 bg-gradient-to-b from-[#04256C] to-transparent opacity-80"
+			></span>
+			<a class="absolute left-1/2 top-12 -ml-10 grid w-20 text-center" href="/">
+				<strong class="text-2xl font-black">Respira</strong>
+				<span class="mb-2 text-xs">Un proyecto de</span>
+				<Icon name="logo" />
+			</a>
+		</div>
+
+		<div
+			class="relative -mt-[100vh] flex min-h-screen snap-start items-center py-16 xl:pb-24 xl:pt-48"
+		>
+			<div data-video-trigger></div>
+			<div data-reveal-group class="container max-w-2xl text-center font-black">
+				<h2 data-reveal="fade-in-up duration-2000 delay-600" class="text-4xl uppercase md:text-3xl">
+					Empieza el
+				</h2>
+				<h1 data-reveal="fade-in-up duration-2000 delay-400" class="text-8xl md:text-9xl">2024:</h1>
+				<h2 data-reveal="fade-in-up duration-2000 delay-600" class="text-4xl uppercase md:text-4xl">
+					como un rey: destinos de España para huir del frío
+				</h2>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-screen snap-start items-center py-16 xl:pb-24 xl:pt-48">
+			<div data-video-trigger></div>
+			<div data-reveal-group class="container">
+				<h2
+					data-reveal="fade-in-up duration-2000 delay-400"
+					class="text-center text-3xl font-black uppercase md:text-4xl"
+				>
+					Lluvia, nieve… todavía nos quedan semanas de invierno a las que hacer frente, y por eso
+					queremos tomar la primera buena decisión del año recordando los fenómenos extremos weather
+					que nos han acompañado y cómo escapar del frío.
+				</h2>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-screen snap-start items-center py-16 xl:pb-24 xl:pt-48">
+			<div data-video-trigger></div>
+			<div data-reveal-group class="container">
+				<h2
+					data-reveal="fade-in-right duration-2000 delay-400"
+					class="max-w-3xl text-lg md:text-3xl"
+				>
+					Con Fien, Isaac y Juliette comenzamos 2023. Y 2024 no se ha quedado atrás acompañándonos
+					con Irene y Juan. ¿Qué tienen en común todos estos nombres? Haber aterrizado en diferentes
+					regiones de nuestro país en forma de borrascas. Según nuestros expertos meteo, durante la
+					temporada 2022-2023 hemos tenido un total de 16 borrascas de alto impacto, y solo en la
+					temporada 2023-2024 llevamos ya 6 borrascas más
+				</h2>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-screen snap-start items-center py-16 xl:pb-24 xl:pt-48">
+			<div data-video-trigger></div>
+			<div class="reveal-group container">
+				<h2 class="reveal-fade-left reveal-delay-400 ml-auto max-w-3xl text-lg md:text-3xl">
+					No podemos cambiar el tiempo, pero sí podemos hacerlo más llevadero a través de unas
+					escapadas con encanto para explorar tesoros naturales en España, con la compañía que tú
+					elijas y con la tranquilidad de saber que no te estás equivocando, mismos atributos en
+					común que cuando tomas la decisión de unirte a <strong>O2</strong>, la compañía de fibra y
+					móvil que te permite <strong>estar conectado a lo que de verdad quieres.</strong>
+				</h2>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-screen snap-start items-center py-16 xl:pb-24 xl:pt-48">
+			<div data-video-trigger></div>
+			<div data-reveal-group class="container">
+				<h2
+					data-reveal="fade-in-up duration-2000 delay-400"
+					class="mx-auto max-w-3xl text-center text-lg md:text-3xl"
+				>
+					Huye del frío y toma la primera buena decisión del año, como <a
+						target="_blank"
+						rel="sponsored"
+						class="underline"
+						href="https://o2online.es/?utm_source=eltiempo0x0eltiempo&utm_medium=cpm&utm_campaign=o2enero2024&utm_term=branding0x0o2enero2024&utm_content=bc0x0native0x0gen0x0eltiempo0x0eltiempo"
+					>
+						contratar O2:</a
+					> Donde tú eliges el tiempo que quieres estar, ya que no hay permanencia, y con la tranquilidad
+					que te da saber que siempre pagarás lo mismo, un precio final, sin sorpresas en tu factura.
+					A esto súmale que contarás con la mayor red de fibra y cobertura móvil 5G
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="xl:py-t4 snap-start overflow-clip pt-16 text-[#04256C]">
+		<div class="container">
+			<div
+				data-reveal-group
+				class="mt-16 grid items-center gap-8 lg:grid-cols-12 xl:mt-24 xl:gap-24"
+			>
+				<div data-reveal="fade-in-up" class="space-y-6 lg:col-span-5">
+					<h3 class="text-5xl font-black">Meses de frío, conexión sin límites</h3>
+					<p>
+						El frío azotó gran parte de España desde principios de 2023, dejando varios avisos rojos
+						por nevadas y viento. Un claro ejemplo lo pudimos observar en la estación de Matxitxako
+						(Bizkaia), donde se registraron abundantes lluvias y una racha de 176 km/h, dejando más
+						de un metro de nieve en la zona de los Pirineos
+					</p>
+					<p>
+						Bizkaia puede ofrecernos destinos de gran variedad donde desconectar durante unos días
+						del invierno, como las vistas de Monte Kolitza, donde podemos disfrutar de tierras
+						vizcaínas, burgalesas y cántabras mientras planificamos nuestra siguiente ruta.
+					</p>
+				</div>
+				<div data-reveal="fade-in-up" class="lg:col-span-7">
+					<Image class="w-full" src={image02} width={892} alt="" />
+				</div>
+			</div>
+
+			<div
+				data-reveal-group
+				class="mt-16 grid items-center gap-8 lg:grid-cols-12 xl:mt-24 xl:gap-24"
+			>
+				<div data-reveal="fade-in-up" class="space-y-6 lg:order-2 lg:col-span-5">
+					<h3 class="text-5xl font-black">0 molestias y miles de planes que disfrutar</h3>
+					<p>
+						El frío nos acompañará durante unos meses más, como los temporales que dejaron cotas de
+						nieve a nivel del mar y avisos rojos por fuertes lluvias y viento el pasado febrero en
+						el Mediterráneo en España, como en Santanyi (Mallorca).
+					</p>
+					<p>
+						Las Islas Baleares siempre son una opción perfecta para desconectar y alejarnos de la
+						rutina de la ciudad. ¿Qué tal un paseo por Mallorca? Reserva un brunch saludable en el
+						interior de Mise en Place, ubicado en el centro de la ciudad, con el que cogerás fuerzas
+						para admirar la belleza del paisaje de la isla mientras tomas miles de fotos para el
+						recuerdo. Por la tarde, aprovecha para emprender una experiencia única haciendo una cata
+						de vino en Bodegas Ribas, en Consell, que disponen de un precioso viñedo con el que
+						hallar la tranquilidad absoluta
+					</p>
+				</div>
+				<div data-reveal="fade-in-up" class="lg:col-span-7">
+					<Image class="w-full" src={image03} width={892} alt="" />
+				</div>
+			</div>
+
+			<div
+				data-reveal-group
+				class="mt-16 grid items-center gap-8 lg:grid-cols-12 xl:mt-24 xl:gap-24"
+			>
+				<div data-reveal="fade-in-up" class="space-y-6 lg:col-span-5">
+					<h3 class="text-5xl font-black">Atención plena en cualquier momento y lugar</h3>
+					<p>
+						En muchas ocasiones, las DANAS no solo arrasan en forma de inundaciones y lluvias
+						torrenciales, sino también pueden dificultar nuestra comunicación por falta de servicio
+						y/o cobertura en las llamadas e internet. Hace tan solo unos meses, en septiembre,
+						recordamos la DANA situada en el suroeste peninsular que acumuló más de 172 mm de agua
+						en San José del Valle (Cádiz), 161 mm en Mogán (Toledo) o 148 mm en San Rafael
+						(Segovia), entre otras zonas afectadas.
+					</p>
+					<p>
+						Para desconectar de las bajas temperaturas, te proponemos una visita al Palacio de los
+						Ribera en Bornos (Cádiz), uno de los menos conocidos de la provincia, pero con más
+						encanto por estar inacabado y haber sido desmantelado para llevar gran parte a la casa
+						Pilatos de Sevilla.
+					</p>
+				</div>
+				<div data-reveal="fade-in-up" class="lg:col-span-7">
+					<Image class="w-full" src={image04} width={892} alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-b from-white via-[#3879B7] to-[#232969] pb-16 text-white xl:pb-24">
+			<div class="container">
+				<Image class="parallax w-full" src={cloud} width={1632} alt="" />
+				<div data-reveal-group class="mx-auto max-w-3xl space-y-6 text-center text-xl md:text-2xl">
+					<p data-reveal="fade-in-up">
+						En resumen, queremos que este año no solo puedas huir del frío, sino que <strong>
+							abogues por ti y por tu tranquilidad,
+						</strong>como hace O2. Producto sencillo, con la mayor red, la tarifa que mejor se
+						adapta a tus necesidades, sin molestias, sin letra pequeña y sin permanencia. Descubre
+						más información en la <a
+							href="https://o2online.es/?utm_source=eltiempo0x0eltiempo&utm_medium=cpm&utm_campaign=o2enero2024&utm_term=branding0x0o2enero2024&utm_content=bc0x0native0x0gen0x0eltiempo0x0eltiempo"
+							target="_blank"
+							rel="sponsored"
+							class="underline"
+						>
+							web de O2</a
+						>
+					</p>
+					<p
+						data-reveal="fade-in-up delay-200"
+						class="mx-auto mt-16 max-w-lg text-3xl md:text-4xl xl:my-24"
+					>
+						Descubre más información en la <strong
+							>web de O2: <a
+								rel="sponsored"
+								class="underline"
+								target="_blank"
+								href="https://o2online.es/contacto/">o2online.es</a
+							></strong
+						> y llamando al <strong>1551</strong>.
+					</p>
+				</div>
+
+				<p class="mb-8 mt-16 text-center">ElTiempo Content para</p>
+				<div class="relative mx-auto mt-32 w-20">
+					<Image
+						class="parallax absolute -bottom-16 right-8 w-48 max-w-none"
+						src={bubble}
+						width={288}
+						alt=""
+					/>
+					<Icon name="logo" />
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

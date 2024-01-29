@@ -1,0 +1,127 @@
+/* FONTS
+****************************************************************************************************/
+@font-face {
+	font-family: 'Air';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(./assets/fonts/Air-Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Air';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(./assets/fonts/Air-Bold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Air';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url(./assets/fonts/Air-Black.woff2) format('woff2');
+}
+
+/* TAILWIND
+****************************************************************************************************/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	@media (min-width: 1281px) {
+		html {
+			font-size: 1.25vw;
+		}
+	}
+	@media (min-width: 1920px) {
+		html {
+			font-size: 24px;
+		}
+	}
+	html {
+		@apply antialiased;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-balance;
+	}
+	p {
+		@apply text-pretty;
+	}
+}
+@layer components {
+}
+@layer utilities {
+}
+
+/* REVEAL EFFECT
+****************************************************************************************************/
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-up'],
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-left'],
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-right'] {
+	opacity: 0;
+}
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-up'] {
+	transform: translateY(6rem);
+}
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-left'] {
+	transform: translateX(6rem);
+}
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-right'] {
+	transform: translateX(-6rem);
+}
+[data-reveal-group='active'] [data-reveal~='fade-in-up'],
+[data-reveal-group='active'] [data-reveal~='fade-in-left'],
+[data-reveal-group='active'] [data-reveal~='fade-in-right'] {
+	will-change: opacity, transform;
+	transition-duration: 1s;
+	transition-property: opacity, transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-reveal-group='active'] [data-reveal~='duration-2000'] {
+	transition-duration: 2000ms;
+}
+[data-reveal-group='active'] [data-reveal~='delay-100'] {
+	transition-delay: 100ms;
+}
+[data-reveal-group='active'] [data-reveal~='delay-200'] {
+	transition-delay: 200ms;
+}
+[data-reveal-group='active'] [data-reveal~='delay-300'] {
+	transition-delay: 300ms;
+}
+[data-reveal-group='active'] [data-reveal~='delay-400'] {
+	transition-delay: 400ms;
+}
+[data-reveal-group='active'] [data-reveal~='delay-600'] {
+	transition-delay: 600ms;
+}
+
+/* PARALLAX EFFECT
+****************************************************************************************************/
+@keyframes parallax {
+	0% {
+		transform: translateY(-40%);
+	}
+	50% {
+		transform: translateY(0rem);
+	}
+	100% {
+		transform: translateY(40%);
+	}
+}
+.parallax {
+	animation-name: parallax;
+	animation-timing-function: linear;
+	animation-timeline: view();
+	animation-range: entry -40% exit 140%;
+}
