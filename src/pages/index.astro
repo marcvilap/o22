@@ -6,6 +6,8 @@ import videoBg from '$assets/videos/video-bg.mp4'
 import image02 from '$assets/images/image02.jpg'
 import image03 from '$assets/images/image03.jpg'
 import image04 from '$assets/images/image04.jpg'
+import image05 from '$assets/images/corporative01.jpg'
+import image06 from '$assets/images/corporative02.jpg'
 import cloud from '$assets/images/cloud.webp'
 import bubble from '$assets/images/bubble.png'
 ---
@@ -184,7 +186,10 @@ import bubble from '$assets/images/bubble.png'
 		<div class="bg-gradient-to-b from-white via-[#3879B7] to-[#232969] pb-16 text-white xl:pb-24">
 			<div class="container">
 				<Image class="parallax w-full" src={cloud} width={1632} alt="" />
-				<div data-reveal-group class="mx-auto max-w-3xl space-y-6 text-center text-xl md:text-2xl">
+				<div data-reveal-group class="mx-auto max-w-3xl text-center text-xl md:text-2xl">
+					<div data-reveal="fade-in-up" class="mb-24 lg:col-span-7">
+						<Image class="w-full" src={image05} width={892} alt="" />
+					</div>
 					<h3 class="text-5xl font-black">Una llamada a la tranquilidad</h3>
 					<p data-reveal="fade-in-up">
 						En resumen, queremos que este año no solo puedas huir del frío, sino que <strong>
@@ -200,6 +205,9 @@ import bubble from '$assets/images/bubble.png'
 							web de O2</a
 						>
 					</p>
+					<div data-reveal="fade-in-up" class="mt-[5rem] lg:col-span-7">
+						<Image class="w-full" src={image06} width={892} alt="" />
+					</div>
 				</div>
 
 				<p class="mb-8 mt-16 text-center">ElTiempo Content para</p>
